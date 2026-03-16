@@ -25,3 +25,8 @@ jobs:
 
       - name: 4. Instalar paquetes (Simulacro)
         run: echo "Aquí iría un comando como npm install si tuviéramos un package.json"
+
+      - name: "5. Modificacion nueva"
+        run: |
+          echo "Esto es un comando multilinea"
+          echo "Esto es otro comando"
