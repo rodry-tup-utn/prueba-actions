@@ -1,0 +1,24 @@
+name: Prueba de Node.js
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  instalar-dependencias:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 1. Descargar el código
+        uses: actions/checkout@v4
+
+      - name: 2. Configurar el entorno de Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: 3. Verificar la versión
+        run: node -v && npm -v
+
+      - name: 4. Instalar paquetes (Simulacro)
+        run: echo "Aquí iría un comando como npm install si tuviéramos un package.json"
